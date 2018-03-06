@@ -1,6 +1,6 @@
 import Spring from "./Spring";
 import Bob from "./Bob";
-
+import "./index.css";
 console.clear();
 let bob;
 let spring;
@@ -12,7 +12,11 @@ var sketch = (p: p5) => {
   p.preload = () => {};
 
   p.setup = () => {
-    p.createCanvas(640, 360);
+      var cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+      // cnv.style
+      // cnv.style('display', 'block');
+    // p.createCanvas(window.innerWidth, window.innerHeight);
+      console.log(p.windowWidth, "setup", )
     // works if length is twice rest length
     spring = new Spring(p.width / 2, 10, 150);
     // spring = new Spring(width/2,10,75);
@@ -25,7 +29,8 @@ var sketch = (p: p5) => {
   };
 
   p.windowResized = () => {
-    // p.resizeCanvas(p.windowWidth, p.windowHeight);
+    // p.resizeCanvas(window.innerWidth, window.innerHeight);
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
   };
 
   p.draw = () => {

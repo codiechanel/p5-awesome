@@ -7,8 +7,21 @@ body,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;  
+  min-height: 100%;
+
+  /**
+  this is for p5
+   */
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
 }
+
+
 /* ul > li {
   font-family: 'Titillium Web', sans-serif;
 } */
