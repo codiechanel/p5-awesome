@@ -16,6 +16,7 @@
   },
   "include": [
     "./src/**/*",
-    "types/p5.d.ts"
+    "types/p5.d.ts",
+    "node_modules/p5/lib/p5.global-mode.d.ts"
   ]
 }
