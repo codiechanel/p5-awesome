@@ -1,7 +1,8 @@
 // declare var p5: any;
 import Spring from "./Spring";
 import Bob from "./Bob";
-// import "p5.dom";
+// import * as p5 from 'p5'
+// import * from 'p5/lib/addons/p5.dom';
 import "./index.css";
 
 console.clear();
@@ -15,13 +16,10 @@ var sketch = (p: p5) => {
   p.preload = () => {};
 
   p.setup = () => {
-    var cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+    var cnv = p.createCanvas(p.windowWidth*.8, p.windowHeight*.8);
 
-
-
-    // cnv.
-
-    // cnv.parent('sketch-holder');
+    // var cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+    cnv.parent("sketch-holder");
     // cnv.style
     // cnv.style('display', 'block');
     // p.createCanvas(window.innerWidth, window.innerHeight);
@@ -39,7 +37,8 @@ var sketch = (p: p5) => {
 
   p.windowResized = () => {
     // p.resizeCanvas(window.innerWidth, window.innerHeight);
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    // p.resizeCanvas(p.windowWidth, p.windowHeight);
+      p.resizeCanvas(p.windowWidth*.8, p.windowHeight*.8);
   };
 
   p.draw = () => {

@@ -13,6 +13,8 @@ body {
   this is for p5
    */
   display: flex;
+  flex: 1;
+  flex-direction: column;
 
   /* This centers our sketch horizontally. */
   justify-content: center;
@@ -64,3 +66,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 
+
+#sketch-holder {
+  height: 800px;
+}
