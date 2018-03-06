@@ -16,7 +16,11 @@ var sketch = (p: p5) => {
   p.preload = () => {};
 
   p.setup = () => {
-    var cnv = p.createCanvas(p.windowWidth*.8, p.windowHeight*.8);
+      var widthParent = document.getElementById('sketch-holder').offsetWidth*.9;
+      var heightParent = document.getElementById('sketch-holder').offsetHeight*.9;
+
+      console.log(widthParent, "setup", )
+    var cnv = p.createCanvas(widthParent , heightParent);
 
     // var cnv = p.createCanvas(p.windowWidth, p.windowHeight);
     cnv.parent("sketch-holder");
@@ -25,10 +29,10 @@ var sketch = (p: p5) => {
     // p.createCanvas(window.innerWidth, window.innerHeight);
 
     // works if length is twice rest length
-    spring = new Spring(p.width / 2, 10, 150);
+    spring = new Spring(widthParent/2, 10, 150);
     // spring = new Spring(width/2,10,75);
     // spring = new Spring(width/2,0,100);
-    bob = new Bob(p.width / 2, 300);
+    bob = new Bob(widthParent/2, 300);
     // bob = new Bob(width/2,240);
     // var position = createVector(40, 50);
 
@@ -38,7 +42,15 @@ var sketch = (p: p5) => {
   p.windowResized = () => {
     // p.resizeCanvas(window.innerWidth, window.innerHeight);
     // p.resizeCanvas(p.windowWidth, p.windowHeight);
-      p.resizeCanvas(p.windowWidth*.8, p.windowHeight*.8);
+      var widthParent = document.getElementById('sketch-holder').offsetWidth*.9;
+      var heightParent = document.getElementById('sketch-holder').offsetHeight*.9;
+      p.resizeCanvas(widthParent, heightParent);
+      /**
+       * reinitialize
+       * @type {Spring}
+       */
+      spring = new Spring(widthParent/2, 10, 150);
+      bob = new Bob(widthParent/2, 300);
   };
 
   p.draw = () => {

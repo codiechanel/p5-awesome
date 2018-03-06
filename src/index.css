@@ -65,8 +65,19 @@ div::-webkit-scrollbar-thumb {
   background-color: white;
 }
 
-
-
 #sketch-holder {
-  height: 800px;
+  padding: 10px;
+  background-color: orange;
+  /*height: 800px;*/
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  /*flex-direction: column;*/
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
 }
