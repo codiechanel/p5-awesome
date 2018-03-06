@@ -1,2 +1,2 @@
-// import './demos/MathDemo'
-import './SpringDemo'
+import './demos/MathDemo'
+// import './SpringDemo'
