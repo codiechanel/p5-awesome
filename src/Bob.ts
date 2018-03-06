@@ -1,4 +1,4 @@
-import {p} from "./index";
+import {p} from "./SpringDemo";
 
 
 class Bob {
