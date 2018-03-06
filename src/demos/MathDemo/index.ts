@@ -42,34 +42,40 @@ var sketch = (p: p5) => {
     //   p.rect(x, y - 70, 40, 40);
     // }
 
-      for( let i = 0; i < plots; i++ ) {
-          // var p = new Plot( stage );
-          // p.setBackground( 'green' );
-          // p.setDimensions( 40, 40 );
-          x = 100 * Math.cos( angle ) + 200;
-          y = 100 * Math.sin( angle ) + 200;
-          // x = 100 * Math.cos( angle ) ;
-          // y = 100 * Math.sin( angle ) ;
+    for (let i = 0; i < plots; i++) {
+      // var p = new Plot( stage );
+      // p.setBackground( 'green' );
+      // p.setDimensions( 40, 40 );
+      x = 100 * Math.cos(angle) + 200;
+      y = 100 * Math.sin(angle) + 200;
+      // x = 100 * Math.cos( angle ) ;
+      // y = 100 * Math.sin( angle ) ;
 
-          // p.rotate( Math.atan2( y - 200, x - 200 ) + 'rad' );
-          // p.position( x, y );
-          // p5.prototype.rotate()
-          let box = p.rect(x, y - 70, 40, 40);
-          // let box = p.text('cool', x, y - 70, 40, 40);
+      // p.rotate( Math.atan2( y - 200, x - 200 ) + 'rad' );
+      // p.position( x, y );
+      // p5.prototype.rotate()
 
-          // box.rotate( p.radians(Math.atan2( y - 200, x - 200 ) ),)
-          // box.rotate( p.radians(p.atan2( y - 200, x - 200 ) ))
-          // p.rotate()
+      // p.rectMode('center');
+        p.rectMode('center');
+      // let box =
+          p.rect(x, y, 40, 40);
+      // p.ellipse(x + 20, y + 20, 4, 4);
+        p.ellipse(x , y , 4, 4);
+      // let box = p.text('cool', x, y - 70, 40, 40);
 
+      // p.rotate(p5.prototype.radians(Math.atan2(y - 200, x - 200)));
 
-          angle += increase;
-          // var a = p.atan2( y - 200, x - 200 )
-          // var a = p.atan2( y - 200, x - 200 )
-          // box.rotate(p.radians(a)
-          // box.atan2( y , x )
-          //
-          // box.rotate(box.radians(box.atan2( y , x )))
-      }
+      // box.rotate( p.radians(p.atan2( y - 200, x - 200 ) ))
+      // p.rotate()
+
+      angle += increase;
+      // var a = p.atan2( y - 200, x - 200 )
+      // var a = p.atan2( y - 200, x - 200 )
+      // box.rotate(p.radians(a)
+      // box.atan2( y , x )
+      //
+      // box.rotate(box.radians(box.atan2( y , x )))
+    }
   };
 
   p.draw = () => {};
