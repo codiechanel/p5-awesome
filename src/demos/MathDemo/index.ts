@@ -8,7 +8,8 @@ var sketch = (p: p5) => {
     var heightParent =
       document.getElementById("sketch-holder").offsetHeight * 0.9;
 
-    var cnv = p.createCanvas(widthParent, heightParent);
+    // var cnv = p.createCanvas(widthParent, heightParent);
+    var cnv = p.createCanvas(400, 400);
     p.background(220);
 
     // var cnv = p.createCanvas(p.windowWidth, p.windowHeight);
@@ -42,10 +43,13 @@ var sketch = (p: p5) => {
     //   p.rect(x, y - 70, 40, 40);
     // }
 
+    // p.translate(200, 200);
+
     for (let i = 0; i < plots; i++) {
       // var p = new Plot( stage );
       // p.setBackground( 'green' );
       // p.setDimensions( 40, 40 );
+
       x = 100 * Math.cos(angle) + 200;
       y = 100 * Math.sin(angle) + 200;
       // x = 100 * Math.cos( angle ) ;
@@ -56,16 +60,20 @@ var sketch = (p: p5) => {
       // p5.prototype.rotate()
 
       // p.rectMode('center');
-        p.rectMode('center');
-      // let box =
-          p.rect(x, y, 40, 40);
-      // p.ellipse(x + 20, y + 20, 4, 4);
-        p.ellipse(x , y , 4, 4);
+
       // let box = p.text('cool', x, y - 70, 40, 40);
+
+      p.rectMode("center");
+      // let box =
+      let box = p.rect(x, y, 40, 40);
+      // box.translate(20, 20);
+      // p.ellipse(x + 20, y + 20, 4, 4);
+      p.ellipse(x, y, 4, 4);
 
       // p.rotate(p5.prototype.radians(Math.atan2(y - 200, x - 200)));
 
-      // box.rotate( p.radians(p.atan2( y - 200, x - 200 ) ))
+      // box.rotate(p5.prototype.radians(p5.prototype.atan2(y - 200, x - 200)));
+
       // p.rotate()
 
       angle += increase;
